@@ -25,13 +25,19 @@
  */
 #  error Sorry but building a managed version of STLport is not supported.
 #endif
+#ifdef MSVCINCLUDEC
+#undef MSVCINCLUDEC
+#endif
+#define MSVCINCLUDEC F:/Windows Kits/10/Include/10.0.17763.0
 
  // define native include path before trying to include anything
 #define _STLP_NATIVE_HEADER(__x) <MSVCINCLUDEC/ucrt/__x>
 #define _STLP_NATIVE_C_HEADER(__x) <MSVCINCLUDEC/ucrt/__x>
 #define _STLP_NATIVE_OLD_STREAMS_HEADER(__x) <MSVCINCLUDEC/ucrt/__x>
-#define _STLP_NATIVE_CPP_C_HEADER(__x) <MSVCINCLUDECPP/include/__x>
-#define _STLP_NATIVE_CPP_RUNTIME_HEADER(__x) <MSVCINCLUDECPP/include/__x>
+//#define _STLP_NATIVE_CPP_C_HEADER(__x) <MSVCINCLUDECPP/include/__x>
+//#define _STLP_NATIVE_CPP_RUNTIME_HEADER(__x) <MSVCINCLUDECPP/include/__x>
+#define _STLP_NATIVE_CPP_C_HEADER(__x) <../include/__x>
+#define _STLP_NATIVE_CPP_RUNTIME_HEADER(__x) <../include/__x>
 
 #if defined (_STLP_USING_PLATFORM_SDK_COMPILER)
 /* This is a specific section for compilers coming with platform SDKs. Native
