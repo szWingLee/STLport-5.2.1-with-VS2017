@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\build\\test",
+    "\\build\\test\\unit",
+    "\\stlport\\stl",
+    "\\stlport\\stl\\config",
+    "\\stlport\\stl\\debug",
+    "\\stlport\\stl\\pointers"
+  ],
+  "PreviewInSolutionExplorer": false
+}
